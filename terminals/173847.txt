@@ -1,0 +1,76 @@
+---
+pid: 50076
+cwd: "C:\\Users\\lscure\\.cursor\\projects\\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\\back_skin_msd_simulation"
+command: "cd \"C:\\Users\\lscure\\.cursor\\projects\\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\\back_skin_msd_simulation\"; python main.py"
+started_at: 2026-05-12T07:03:43.717Z
+running_for_ms: 67082204 
+---
+============================================================
+  Back Skin MSD Deformation Simulation
+============================================================
+
+[1/6] Building three-layer MSD model ...
+  Grid: 45 x 25 = 1125 nodes/layer,  3 layers
+  Total particles: 3375
+[2/6] Creating spring network ...
+  Total springs: 21456
+[3/6] Initializing probe ...
+  Radius: 15.0 mm,  Indentation: 5.0 mm
+  Travel: 120 mm at 5.0 mm/s
+[4/6] Initializing simulator ...
+  dt = 0.001 s,  total time = 25.00 s,  steps = 25000
+  Friction model: simple
+[5/6] Running simulation ...
+Starting simulation: 25000 steps, dt=0.001, total_time=25.00 s
+  [step 1000] Snapshot t0 (end of press)
+  Progress: 8.0%  (step 2000/25000)
+  Progress: 16.0%  (step 4000/25000)
+  Progress: 24.0%  (step 6000/25000)
+  [step 7000] Snapshot t1 (early slide)
+  Progress: 32.0%  (step 8000/25000)
+  Progress: 40.0%  (step 10000/25000)
+  Progress: 48.0%  (step 12000/25000)
+  [step 13000] Snapshot t2 (mid slide)
+  Progress: 56.0%  (step 14000/25000)
+  Progress: 64.0%  (step 16000/25000)
+  Progress: 72.0%  (step 18000/25000)
+  [step 19000] Snapshot t3 (late slide)
+  Progress: 80.0%  (step 20000/25000)
+  Progress: 88.0%  (step 22000/25000)
+  Progress: 96.0%  (step 24000/25000)
+Simulation complete.
+  Wall-clock time: 67071.2 s
+[6/6] Generating visualizations ...
+  Saved: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs\back_skin_surface_t0.png
+  Saved: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs\back_skin_surface_t1.png
+  Saved: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs\back_skin_surface_t2.png
+  Saved: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs\back_skin_surface_t3.png
+  Saved: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs\back_xz_cross_section_t3.png
+  Saved: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs\back_displacement_t3_x.png
+  Saved: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs\back_displacement_t3_z.png
+  Saved: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs\back_displacement_t3_magnitude.png
+
+============================================================
+  Simulation Summary
+============================================================
+  Particles:            3375
+  Springs:              21456
+  Steps:                25000
+  dt:                   0.001 s
+  Total sim time:       25.00 s
+  Max indentation:      4.663 mm
+  Max X displacement:   3.080 mm
+  Max Z displacement:   4.663 mm
+  Max total disp:       5.386 mm
+  Friction model:       simple
+  Stick contacts:       0
+  Slip contacts:        0
+============================================================
+  Output images saved to: C:\Users\lscure\.cursor\projects\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\back_skin_msd_simulation\outputs
+============================================================
+
+---
+exit_code: 0
+elapsed_ms: 67082654
+ended_at: 2026-05-13T01:41:46.371Z
+---

@@ -1,10 +1,12 @@
 """Back skin MSD simulation entry point.
 
 Usage:
-    python main.py          # full resolution (slow, ~30 min)
-    python main.py --fast   # reduced resolution for quick demo (~2 min)
+    python main.py                        # default config
+    python main.py --fast                  # reduced resolution quick demo
+    python main.py --user_id user_001      # load user-specific model
 """
 
+import argparse
 import os
 import sys
 import time
@@ -14,6 +16,7 @@ from model import BackSkinMSDModel
 from spring import create_springs
 from probe import SphericalProbe
 from simulator import Simulator
+from user_model import load_user_back_model
 from visualization import (
     plot_deformation_snapshots,
     plot_xz_cross_section,
@@ -37,10 +40,24 @@ def apply_fast_settings(cfg):
     return cfg
 
 
-def main():
-    cfg = config
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Back Skin MSD Deformation Simulation"
+    )
+    parser.add_argument("--fast", action="store_true", help="Coarser grid for quick demo")
+    parser.add_argument("--user_id", default=None, help="Load personalised user model")
+    return parser.parse_args()
 
-    if '--fast' in sys.argv:
+
+def main():
+    args = parse_args()
+
+    cfg, model_type = load_user_back_model(args.user_id)
+
+    if args.user_id:
+        print('User: {}  |  Model type: {}'.format(args.user_id, model_type))
+
+    if args.fast:
         print('*** FAST MODE: coarser grid, larger dt ***')
         cfg = apply_fast_settings(cfg)
 

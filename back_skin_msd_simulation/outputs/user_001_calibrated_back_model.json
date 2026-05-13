@@ -1,0 +1,16 @@
+{
+  "user_id": "user_001",
+  "age": 25,
+  "sex": "male",
+  "bmi": 24.2,
+  "region": "lower_back",
+  "k_skin_N_m": 4581.2671,
+  "k_muscle_fat_N_m": 4034.4233,
+  "damping": 0.85,
+  "mu_static": 0.585,
+  "mu_dynamic": 0.315,
+  "contact_tangent_gain": 20.0,
+  "calibration_loss": 0.137129,
+  "calibrated_from": "user_001_first_massage.csv",
+  "created_at": "2026-05-13T07:58:46.598856+00:00"
+}

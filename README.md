@@ -109,15 +109,72 @@ back_skin_msd_simulation/
   simulator.py       - Dynamics integrator + friction
   visualization.py   - 3D surface / cross-section / displacement plots
   metrics.py         - MAE / SD error metrics (for future experiments)
-  main.py            - Entry point
-  README.md          - This file
-  outputs/           - Generated images
+  personalization.py     - Stage 1: demographics -> initial back model
+  first_massage_logger.py - First-massage data recorder + synthetic generator
+  parameter_fitting.py   - Stage 2: force-displacement -> calibrated model
+  user_model.py          - Priority-based user model loader
+  main.py                - Entry point (supports --user_id)
+  outputs/               - Generated images and model JSONs
+  user_data/             - Per-user first-massage CSV recordings
 ```
+
+## Two-Stage Individualised Back Modelling
+
+The system personalises the MSD back model in two stages:
+
+### Stage 1: Demographics → Initial Model
+
+Before the first massage, the system generates a **conservative initial model**
+from the user's age, sex, BMI, and target region.
+
+- BMI adjusts muscle-fat thickness, stiffness, and damping
+- Age adjusts skin stiffness and damping
+- Sex applies small corrections
+- Region (upper / middle / lower back) shifts layer parameters
+
+This model is a rough estimate — not a precision model.
+
+### Stage 2: First-Massage Force-Displacement Curve → Calibrated Model
+
+During the first massage the system records force-displacement data.
+After the session, the recorded curve is used to **optimise MSD parameters**
+(k_skin, k_muscle_fat, damping, friction coefficients) so the simulation
+matches the measured indentation.
+
+This calibrated model is the **precision personalised model**.
+
+### Subsequent Sessions
+
+On every subsequent massage, the system **automatically loads the calibrated
+model** if it exists; otherwise it falls back to the initial model, then to
+the global default.
+
+### Quick-Start Example
+
+```bash
+cd back_skin_msd_simulation
+
+# Stage 1: generate initial model
+python personalization.py --user_id user_001 --age 25 --sex male --bmi 24.2 --region lower_back
+
+# Record first massage (synthetic test data)
+python first_massage_logger.py --user_id user_001 --synthetic
+
+# Stage 2: fit parameters from first-massage data
+python parameter_fitting.py --user_id user_001
+
+# Run simulation with personalised model
+python main.py --user_id user_001
+```
+
+> **Note:** Age, sex, and BMI can only produce an initial estimate.
+> The force-displacement curve from the first massage is the key input
+> for precision individualisation.
 
 ## Future Extensions
 
 - Import real back surface point-cloud (RealSense / Azure Kinect)
-- Calibrate E_skin, E_muscle_fat, damping from indentation experiments
+- Full MSD simulation-in-the-loop parameter optimisation
 - Use full paper stick-slip formula with fitted tau0 and alpha
 - Add anatomical back curvature
 - Individualised soft tissue thickness from ultrasound / MRI

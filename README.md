@@ -75,6 +75,29 @@ python main.py
 
 Output images are saved to the `outputs/` folder.
 
+## 智能按摩 MVP
+
+该 MVP 实现：
+
+1. 背部区域识别
+2. 加载个体化背部模型
+3. 推荐区域按压力度
+4. 判断当前力度风险
+
+示例命令：
+
+```bash
+cd back_skin_msd_simulation
+python mvp_demo.py --user_id user_001 --x -45 --y -80 --force 10 --indentation 5.1
+```
+
+说明：
+
+- `x`, `y` 是背部二维坐标，单位 mm
+- `force` 是当前法向力，单位 N
+- `indentation` 是当前压入深度，单位 mm
+- 输出结果保存在 `outputs/{user_id}_mvp_report.json`
+
 ## Modifying Parameters
 
 Edit `config.py` to change:

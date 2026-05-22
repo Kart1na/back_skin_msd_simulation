@@ -1,0 +1,14 @@
+---
+pid: 39836
+cwd: "C:\\Users\\lscure\\.cursor\\projects\\C-Users-lscure-AppData-Local-Temp-562f9271-ee6f-4ed4-b257-42ed54ddef11\\back_skin_msd_simulation"
+command: "echo hello"
+started_at: 2026-05-12T07:39:58.087Z
+running_for_ms: 54287    
+---
+hello
+
+---
+exit_code: 0
+elapsed_ms: 54322
+ended_at: 2026-05-12T07:40:52.409Z
+---

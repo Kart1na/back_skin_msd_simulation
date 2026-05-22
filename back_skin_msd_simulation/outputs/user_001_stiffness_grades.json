@@ -1,0 +1,308 @@
+{
+  "user_id": "user_001",
+  "grade_mode": "relative",
+  "reference_stiffness_N_m": 2796.93,
+  "absolute_reference_stiffness_N_m": 2200.0,
+  "overall": {
+    "grade": "B",
+    "label": "Moderate",
+    "score": 1.0,
+    "stiffness_N_m": 2796.93,
+    "reference_stiffness_N_m": 2796.93,
+    "grade_mode": "relative"
+  },
+  "points": [
+    {
+      "grade": "D",
+      "label": "Severe",
+      "score": 1.691,
+      "stiffness_N_m": 4730.02,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "lumbar_right",
+      "region": "lumbar_right",
+      "section": "Lower Back",
+      "x_mm": 25.0,
+      "y_mm": -115.0
+    },
+    {
+      "grade": "C",
+      "label": "High",
+      "score": 1.374,
+      "stiffness_N_m": 3842.43,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "lower_back_right",
+      "region": "lower_back_right",
+      "section": "Lower Back",
+      "x_mm": 45.0,
+      "y_mm": -95.0
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 1.069,
+      "stiffness_N_m": 2990.61,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "middle_back_right",
+      "region": "middle_back_right",
+      "section": "Mid Back",
+      "x_mm": 45.0,
+      "y_mm": 10.0
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.995,
+      "stiffness_N_m": 2783.31,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "shoulder_right",
+      "region": "shoulder_right",
+      "section": "Upper Back",
+      "x_mm": 85.0,
+      "y_mm": 125.0
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.935,
+      "stiffness_N_m": 2614.54,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "mid_paraspinal_right",
+      "region": "mid_paraspinal_right",
+      "section": "Mid Back",
+      "x_mm": 25.0,
+      "y_mm": 20.0
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.927,
+      "stiffness_N_m": 2591.45,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "lumbar_left",
+      "region": "lumbar_left",
+      "section": "Lower Back",
+      "x_mm": -25.0,
+      "y_mm": -115.0
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.894,
+      "stiffness_N_m": 2500.43,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "lower_back_left",
+      "region": "lower_back_left",
+      "section": "Lower Back",
+      "x_mm": -45.0,
+      "y_mm": -95.0
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.857,
+      "stiffness_N_m": 2396.65,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "shoulder_left",
+      "region": "shoulder_left",
+      "section": "Upper Back",
+      "x_mm": -85.0,
+      "y_mm": 125.0
+    },
+    {
+      "grade": "A",
+      "label": "Mild",
+      "score": 0.825,
+      "stiffness_N_m": 2306.5,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "upper_back_right",
+      "region": "upper_back_right",
+      "section": "Upper Back",
+      "x_mm": 55.0,
+      "y_mm": 105.0
+    },
+    {
+      "grade": "A",
+      "label": "Mild",
+      "score": 0.822,
+      "stiffness_N_m": 2298.9,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "middle_back_left",
+      "region": "middle_back_left",
+      "section": "Mid Back",
+      "x_mm": -45.0,
+      "y_mm": 10.0
+    },
+    {
+      "grade": "A",
+      "label": "Mild",
+      "score": 0.816,
+      "stiffness_N_m": 2281.68,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "mid_paraspinal_left",
+      "region": "mid_paraspinal_left",
+      "section": "Mid Back",
+      "x_mm": -25.0,
+      "y_mm": 20.0
+    },
+    {
+      "grade": "A",
+      "label": "Mild",
+      "score": 0.796,
+      "stiffness_N_m": 2226.63,
+      "reference_stiffness_N_m": 2796.93,
+      "point_id": "upper_back_left",
+      "region": "upper_back_left",
+      "section": "Upper Back",
+      "x_mm": -55.0,
+      "y_mm": 105.0
+    }
+  ],
+  "regions": [
+    {
+      "grade": "D",
+      "label": "Severe",
+      "score": 1.691,
+      "stiffness_N_m": 4730.02,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "lumbar_right",
+      "display_name": "lumbar_right",
+      "section": "Lower Back"
+    },
+    {
+      "grade": "C",
+      "label": "High",
+      "score": 1.374,
+      "stiffness_N_m": 3842.43,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "lower_back_right",
+      "display_name": "右侧腰背区",
+      "section": "Lower Back"
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 1.069,
+      "stiffness_N_m": 2990.61,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "middle_back_right",
+      "display_name": "右中背区",
+      "section": "Mid Back"
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.995,
+      "stiffness_N_m": 2783.31,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "shoulder_right",
+      "display_name": "右肩部区域",
+      "section": "Upper Back"
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.935,
+      "stiffness_N_m": 2614.54,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "mid_paraspinal_right",
+      "display_name": "mid_paraspinal_right",
+      "section": "Mid Back"
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.927,
+      "stiffness_N_m": 2591.45,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "lumbar_left",
+      "display_name": "lumbar_left",
+      "section": "Lower Back"
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.894,
+      "stiffness_N_m": 2500.43,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "lower_back_left",
+      "display_name": "左侧腰背区",
+      "section": "Lower Back"
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.857,
+      "stiffness_N_m": 2396.65,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "shoulder_left",
+      "display_name": "左肩部区域",
+      "section": "Upper Back"
+    },
+    {
+      "grade": "A",
+      "label": "Mild",
+      "score": 0.825,
+      "stiffness_N_m": 2306.5,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "upper_back_right",
+      "display_name": "右上背区",
+      "section": "Upper Back"
+    },
+    {
+      "grade": "A",
+      "label": "Mild",
+      "score": 0.822,
+      "stiffness_N_m": 2298.9,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "middle_back_left",
+      "display_name": "左中背区",
+      "section": "Mid Back"
+    },
+    {
+      "grade": "A",
+      "label": "Mild",
+      "score": 0.816,
+      "stiffness_N_m": 2281.68,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "mid_paraspinal_left",
+      "display_name": "mid_paraspinal_left",
+      "section": "Mid Back"
+    },
+    {
+      "grade": "A",
+      "label": "Mild",
+      "score": 0.796,
+      "stiffness_N_m": 2226.63,
+      "reference_stiffness_N_m": 2796.93,
+      "region": "upper_back_left",
+      "display_name": "左上背区",
+      "section": "Upper Back"
+    }
+  ],
+  "sections": [
+    {
+      "grade": "C",
+      "label": "High",
+      "score": 1.221,
+      "stiffness_N_m": 3416.08,
+      "reference_stiffness_N_m": 2796.93,
+      "section": "Lower Back"
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.91,
+      "stiffness_N_m": 2546.43,
+      "reference_stiffness_N_m": 2796.93,
+      "section": "Mid Back"
+    },
+    {
+      "grade": "B",
+      "label": "Moderate",
+      "score": 0.868,
+      "stiffness_N_m": 2428.27,
+      "reference_stiffness_N_m": 2796.93,
+      "section": "Upper Back"
+    }
+  ]
+}

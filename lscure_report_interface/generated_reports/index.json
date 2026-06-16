@@ -1,0 +1,26 @@
+[
+  {
+    "userId": "api_demo",
+    "reportId": "AI-FORCE-20260608-174343",
+    "fileName": "api_demo_20260608_174352.html",
+    "url": "http://127.0.0.1:8767/reports/api_demo_20260608_174352.html",
+    "createdAt": "2026-06-08T17:43:52",
+    "sourcePaths": {
+      "pointCloudPath": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\user_data\\api_demo_pointCloud.txt",
+      "acuCloPath": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\user_data\\api_demo_acupoints.txt",
+      "robotPosToCameraPath": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\user_data\\api_demo_robot_trajectory.txt"
+    }
+  },
+  {
+    "userId": "api_demo",
+    "reportId": "AI-FORCE-20260608-172555",
+    "fileName": "api_demo_20260608_172604.html",
+    "url": "http://127.0.0.1:8765/reports/api_demo_20260608_172604.html",
+    "createdAt": "2026-06-08T17:26:04",
+    "sourcePaths": {
+      "pointCloudPath": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\user_data\\api_demo_pointCloud.txt",
+      "acuCloPath": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\user_data\\api_demo_acupoints.txt",
+      "robotPosToCameraPath": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\user_data\\api_demo_robot_trajectory.txt"
+    }
+  }
+]

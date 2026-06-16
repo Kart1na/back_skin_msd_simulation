@@ -1,0 +1,4 @@
+﻿section,contact_count,duration_s,mean_force_N,max_force_N,main_acupoints,grade,label,to_do,force_level,attention_level,recommended_force_N,safe_force_range_N
+Upper Back,4,0.2,6.55,7.3,"['附分', '天宗']",B,Moderate,Posture Care,medium,normal,7.05,"[5.55, 8.55]"
+Mid Back,4,0.2,7.875,8.9,"['至阳', '骨缝']",B,Moderate,Posture Care,medium,normal,8.38,"[6.88, 9.88]"
+Lower Back,4,0.2,10.2,11.1,"['肾俞', '腰阳关']",C,Higher,Release + Stretch,medium,attention,9.0,"[7.5, 10.5]"

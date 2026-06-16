@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>智能按摩检测报告 - api_demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f3f7f8; color: #263238; font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif; }
+    .page { width: min(100%, 920px); margin: 0 auto; padding: 28px 30px 44px; }
+    .hero { border: 1px solid #d7e3ea; border-top: 4px solid #008c95; border-radius: 14px; background: white; padding: 22px 24px; box-shadow: 0 8px 24px rgba(11, 42, 74, .055); }
+    .hero-grid { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; }
+    .avatar { display: grid; place-items: center; width: 66px; height: 66px; border-radius: 16px; background: #008c95; color: white; font-size: 28px; font-weight: 900; }
+    h1,h2,h3,h4,p { margin: 0; }
+    h1 { font-size: 26px; color:#0b2a4a; line-height:1.25; letter-spacing: 0; font-weight: 900; }
+    .muted { color: #6b7c85; font-size: 14px; margin-top: 5px; }
+    .grade-pill { border-radius: 999px; background: #e6f7f8; color: #007f86; border:1px solid #cfe9ec; padding: 8px 14px; font-size: 16px; font-weight: 900; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; }
+    .stat { border-radius: 12px; background: #f7fafc; padding: 13px 14px; border: 1px solid #e3edf2; }
+    .stat span { display:block; color:#71828a; font-size: 11px; font-weight:700; }
+    .stat b { display:block; margin-top:5px; font-size: 19px; line-height:1.2; color:#0b2a4a; }
+    .section-title { display:flex; align-items:center; gap:10px; margin: 26px 2px 12px; }
+    .section-title h2 { font-size: 21px; color:#0b2a4a; letter-spacing:0; }
+    .tag { background:#e6f7f8; color:#008c95; border-radius:999px; padding:5px 11px; font-weight:900; font-size: 12px; }
+    .card { position: relative; border: 1px solid #d7e3ea; border-top: 4px solid #008c95; border-radius: 14px; background: white; padding: 20px 22px; margin: 12px 0; box-shadow: 0 8px 24px rgba(11, 42, 74, .05); break-inside: avoid; }
+    .rank { position:absolute; left:22px; top:23px; display:grid; place-items:center; width:46px; height:46px; border-radius:12px; color:white; font-size:20px; font-weight:900; background:#008c95; }
+    .rank-1 { background:#d94a4a; } .rank-2 { background:#e08a22; }
+    .region-head { display:flex; justify-content:space-between; align-items:center; padding-left:74px; }
+    .region-head h3 { font-size: 23px; color:#0b2a4a; }
+    .region-head p { color:#71828a; font-size:13px; margin-top:3px; }
+    .score { display:flex; align-items:center; gap:9px; color:#71828a; font-size:13px; font-weight:800; }
+    .score strong { color:#d94a4a; font-size:28px; }
+    .badge { display:inline-grid; place-items:center; min-width:36px; height:36px; border-radius:10px; color:white; font-size:17px; font-weight:900; }
+    .badge-A { background:#34a853; } .badge-B { background:#008c95; } .badge-C { background:#d94a4a; } .badge-D { background:#8a3a1a; }
+    .subgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:20px; border-radius:12px; background:#fff6f6; padding:14px; text-align:center; }
+    .subgrid span { color:#71828a; font-size:12px; } .subgrid b { display:block; margin-top:5px; font-size:20px; color:#0b2a4a; }
+    .recommend { margin-top:14px; border-radius:12px; background:#f7fafc; padding:14px; border:1px solid #e3edf2; }
+    .recommend div { display:flex; justify-content:space-between; font-weight:900; }
+    .recommend strong { color:#008c95; }
+    .recommend p { margin-top:7px; color:#6b7c85; font-size:13px; line-height:1.55; }
+    .chips { display:flex; flex-wrap:wrap; gap:7px; margin-top:14px; }
+    .chips em { font-style:normal; border-radius:999px; background:#edfafa; color:#0f6670; padding:6px 11px; font-size:12px; font-weight:800; }
+    .profile { margin-top:16px; }
+    .profile h4 { font-size:17px; margin-bottom:9px; color:#0b2a4a; }
+    .profile-row { display:grid; grid-template-columns:54px 1fr 44px; gap:10px; align-items:center; margin:7px 0; color:#6b7c85; font-size:13px; }
+    .bar { height:10px; border-radius:999px; background:#edf2f7; overflow:hidden; }
+    .bar i { display:block; height:100%; border-radius:999px; background:linear-gradient(90deg,#ef6b6b,#8a3a1a); }
+    .suggestion { margin-top:13px; color:#41525a; line-height:1.68; font-size:13px; }
+    table { width:100%; border-collapse: collapse; background:white; border-radius:12px; overflow:hidden; }
+    th,td { padding:10px 11px; border-bottom:1px solid #e3edf2; text-align:left; font-size:13px; line-height:1.45; }
+    th { background:#f2f8f9; color:#0b2a4a; font-weight:900; }
+    .note { margin-top:14px; color:#6b7c85; line-height:1.65; font-size:12px; }
+    @media print {
+      body { background:white; }
+      .page { width: 100%; padding: 18mm; }
+      .card,.hero { box-shadow:none; border:1px solid #e2e8f0; border-top:5px solid #18b7bd; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="avatar">张</div>
+        <div>
+          <h1>智能按摩检测报告</h1>
+          <p class="muted">张女士 · 13700137003 · 女 28岁</p>
+        </div>
+        <div class="grade-pill">健康等级 C</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><span>总采样点</span><b>12</b></div>
+        <div class="stat"><span>有效接触点</span><b>12</b></div>
+        <div class="stat"><span>接触占比</span><b>100%</b></div>
+        <div class="stat"><span>平均接触力</span><b>8.21 N</b></div>
+      </div>
+    </section>
+    <div class="section-title"><h2>身体重点部位分析</h2><span class="tag">TOP 3</span></div>
+    
+        <section class="card region-card">
+          <div class="rank rank-1">1</div>
+          <div class="region-head">
+            <div>
+              <h3>腰背</h3>
+              <p>Lower Back</p>
+            </div>
+            <div class="score">
+              <span>综合</span><strong>84</strong><b class="badge badge-C">C</b>
+            </div>
+          </div>
+          <div class="subgrid">
+            <div><span>肌肉</span><b>88</b></div>
+            <div><span>穴位</span><b>54</b></div>
+            <div><span>脊柱</span><b>76</b></div>
+            <div><span>循环</span><b>70</b></div>
+          </div>
+          <div class="recommend">
+            <div><span>推荐力度</span><strong>9.00 N</strong></div>
+            <p>安全范围 7.50-10.50 N · 平均力 10.20 N · 最大力 11.10 N</p>
+          </div>
+          <div class="chips"><em>肾俞</em><em>腰阳关</em></div>
+          <div class="profile">
+            <h4>五维画像</h4>
+            
+            <div class="profile-row">
+              <span>僵硬</span>
+              <div class="bar"><i style="width:88.0%"></i></div>
+              <b class="badge badge-D">D</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>疼痛</span>
+              <div class="bar"><i style="width:95.0%"></i></div>
+              <b class="badge badge-D">D</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>淤堵</span>
+              <div class="bar"><i style="width:54.0%"></i></div>
+              <b class="badge badge-A">A</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>筋膜</span>
+              <div class="bar"><i style="width:76.0%"></i></div>
+              <b class="badge badge-C">C</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>疲劳</span>
+              <div class="bar"><i style="width:83.0%"></i></div>
+              <b class="badge badge-C">C</b>
+            </div>
+            
+          </div>
+          <p class="suggestion">腰背检测到Higher级僵硬倾向，建议下一轮以 9.0 N 左右启动，优先处理 肾俞, 腰阳关。</p>
+        </section>
+        
+        <section class="card region-card">
+          <div class="rank rank-2">2</div>
+          <div class="region-head">
+            <div>
+              <h3>中背</h3>
+              <p>Mid Back</p>
+            </div>
+            <div class="score">
+              <span>综合</span><strong>75</strong><b class="badge badge-C">C</b>
+            </div>
+          </div>
+          <div class="subgrid">
+            <div><span>肌肉</span><b>79</b></div>
+            <div><span>穴位</span><b>54</b></div>
+            <div><span>脊柱</span><b>67</b></div>
+            <div><span>循环</span><b>68</b></div>
+          </div>
+          <div class="recommend">
+            <div><span>推荐力度</span><strong>8.38 N</strong></div>
+            <p>安全范围 6.88-9.88 N · 平均力 7.88 N · 最大力 8.90 N</p>
+          </div>
+          <div class="chips"><em>至阳</em><em>骨缝</em></div>
+          <div class="profile">
+            <h4>五维画像</h4>
+            
+            <div class="profile-row">
+              <span>僵硬</span>
+              <div class="bar"><i style="width:79.0%"></i></div>
+              <b class="badge badge-C">C</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>疼痛</span>
+              <div class="bar"><i style="width:84.0%"></i></div>
+              <b class="badge badge-C">C</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>淤堵</span>
+              <div class="bar"><i style="width:54.0%"></i></div>
+              <b class="badge badge-A">A</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>筋膜</span>
+              <div class="bar"><i style="width:67.0%"></i></div>
+              <b class="badge badge-B">B</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>疲劳</span>
+              <div class="bar"><i style="width:78.0%"></i></div>
+              <b class="badge badge-C">C</b>
+            </div>
+            
+          </div>
+          <p class="suggestion">中背检测到Higher级僵硬倾向，建议下一轮以 8.38 N 左右启动，优先处理 至阳, 骨缝。</p>
+        </section>
+        
+        <section class="card region-card">
+          <div class="rank rank-3">3</div>
+          <div class="region-head">
+            <div>
+              <h3>上背</h3>
+              <p>Upper Back</p>
+            </div>
+            <div class="score">
+              <span>综合</span><strong>69</strong><b class="badge badge-B">B</b>
+            </div>
+          </div>
+          <div class="subgrid">
+            <div><span>肌肉</span><b>73</b></div>
+            <div><span>穴位</span><b>54</b></div>
+            <div><span>脊柱</span><b>61</b></div>
+            <div><span>循环</span><b>67</b></div>
+          </div>
+          <div class="recommend">
+            <div><span>推荐力度</span><strong>7.05 N</strong></div>
+            <p>安全范围 5.55-8.55 N · 平均力 6.55 N · 最大力 7.30 N</p>
+          </div>
+          <div class="chips"><em>附分</em><em>天宗</em></div>
+          <div class="profile">
+            <h4>五维画像</h4>
+            
+            <div class="profile-row">
+              <span>僵硬</span>
+              <div class="bar"><i style="width:73.0%"></i></div>
+              <b class="badge badge-C">C</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>疼痛</span>
+              <div class="bar"><i style="width:76.0%"></i></div>
+              <b class="badge badge-C">C</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>淤堵</span>
+              <div class="bar"><i style="width:54.0%"></i></div>
+              <b class="badge badge-A">A</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>筋膜</span>
+              <div class="bar"><i style="width:61.0%"></i></div>
+              <b class="badge badge-B">B</b>
+            </div>
+            
+            <div class="profile-row">
+              <span>疲劳</span>
+              <div class="bar"><i style="width:74.0%"></i></div>
+              <b class="badge badge-C">C</b>
+            </div>
+            
+          </div>
+          <p class="suggestion">上背检测到Moderate级僵硬倾向，建议下一轮以 7.05 N 左右启动，优先处理 附分, 天宗。</p>
+        </section>
+        
+    <section class="card">
+      <h2>高频接触穴位与推荐力度</h2>
+      <table>
+        <thead><tr><th>#</th><th>穴位</th><th>分区</th><th>接触数</th><th>平均力</th><th>推荐力</th><th>力度状态</th></tr></thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>附分</td>
+          <td>Upper Back</td>
+          <td>2</td>
+          <td>5.95 N</td>
+          <td>6.45 N</td>
+          <td>适中</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>天宗</td>
+          <td>Upper Back</td>
+          <td>2</td>
+          <td>7.15 N</td>
+          <td>7.65 N</td>
+          <td>适中</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>至阳</td>
+          <td>Mid Back</td>
+          <td>2</td>
+          <td>8.75 N</td>
+          <td>9.00 N</td>
+          <td>适中</td>
+        </tr>
+        
+        <tr>
+          <td>4</td>
+          <td>骨缝</td>
+          <td>Mid Back</td>
+          <td>2</td>
+          <td>7.00 N</td>
+          <td>7.50 N</td>
+          <td>适中</td>
+        </tr>
+        
+        <tr>
+          <td>5</td>
+          <td>肾俞</td>
+          <td>Lower Back</td>
+          <td>2</td>
+          <td>10.80 N</td>
+          <td>9.00 N</td>
+          <td>适中</td>
+        </tr>
+        
+        <tr>
+          <td>6</td>
+          <td>腰阳关</td>
+          <td>Lower Back</td>
+          <td>2</td>
+          <td>9.60 N</td>
+          <td>9.00 N</td>
+          <td>适中</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="card">
+      <h2>检测说明</h2>
+      <p class="note">采样率 20.0 Hz，接触阈值 25.0 mm。当前输入不含 indentation_mm，僵硬程度为基于按压力、停留时长、穴位密度与对齐质量的检测评分；如后续输入压入深度，可切换为物理刚度 N/m。</p>
+    </section>
+  </main>
+</body>
+</html>

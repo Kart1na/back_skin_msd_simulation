@@ -1,0 +1,4 @@
+﻿section,contact_count,duration_s,mean_force_N,max_force_N,main_acupoints,grade,label,to_do,force_level,attention_level,recommended_force_N,safe_force_range_N
+Upper Back,39,1.95,6.05,8.155,"['曲垣(对称)', '天宗', '肩外俞(对称)', '天宗(对称)', '大椎']",B,Moderate,Posture Care,medium,normal,6.55,"[5.05, 8.05]"
+Mid Back,25,1.25,6.032,8.874,"['骨缝3', '骨缝3(对称)', '骨缝2(对称)', '骨缝2', '肓门']",B,Moderate,Posture Care,medium,normal,6.53,"[5.03, 8.03]"
+Lower Back,33,1.65,5.415,8.107,"['腰宜', '志室', '小肠俞(对称)', '上髎', '腰宜(对称)']",B,Moderate,Posture Care,medium,normal,5.92,"[4.42, 7.42]"

@@ -1,0 +1,7 @@
+﻿name,section,region,sample_count,contact_count,duration_s,mean_force_N,max_force_N,mean_distance_mm,min_distance_mm,force_level,attention_level,recommended_force_N,safe_force_range_N
+附分,Upper Back,upper_back_left,2,2,0.1,5.95,6.1,2.292,0.0,medium,normal,6.45,"[4.95, 7.95]"
+天宗,Upper Back,upper_back_left,2,2,0.1,7.15,7.3,1.659,0.0,medium,normal,7.65,"[6.15, 9.15]"
+至阳,Mid Back,spine_center,2,2,0.1,8.75,8.9,1.659,0.0,medium,normal,9.0,"[7.5, 10.5]"
+骨缝,Mid Back,middle_back_left,2,2,0.1,7.0,7.2,1.659,0.0,medium,normal,7.5,"[6.0, 9.0]"
+肾俞,Lower Back,lower_back_right,2,2,0.1,10.8,11.1,1.659,0.0,medium,attention,9.0,"[7.5, 10.5]"
+腰阳关,Lower Back,spine_center,2,2,0.1,9.6,9.8,1.224,0.0,medium,normal,9.0,"[7.5, 10.5]"

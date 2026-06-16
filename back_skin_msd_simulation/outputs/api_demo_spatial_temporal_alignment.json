@@ -1,0 +1,505 @@
+{
+  "overall": {
+    "total_samples": 12,
+    "contact_samples": 12,
+    "contact_ratio": 1.0,
+    "total_duration_s": 0.6,
+    "contact_duration_s": 0.6,
+    "mean_force_N": 8.208,
+    "max_force_N": 11.1,
+    "min_force_N": 5.8,
+    "mean_contact_force_N": 8.208,
+    "max_contact_force_N": 11.1
+  },
+  "by_acupoint": [
+    {
+      "name": "附分",
+      "section": "Upper Back",
+      "region": "upper_back_left",
+      "sample_count": 2,
+      "contact_count": 2,
+      "duration_s": 0.1,
+      "mean_force_N": 5.95,
+      "max_force_N": 6.1,
+      "mean_distance_mm": 2.292,
+      "min_distance_mm": 0.0,
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 6.45,
+      "safe_force_range_N": [
+        4.95,
+        7.95
+      ]
+    },
+    {
+      "name": "天宗",
+      "section": "Upper Back",
+      "region": "upper_back_left",
+      "sample_count": 2,
+      "contact_count": 2,
+      "duration_s": 0.1,
+      "mean_force_N": 7.15,
+      "max_force_N": 7.3,
+      "mean_distance_mm": 1.659,
+      "min_distance_mm": 0.0,
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 7.65,
+      "safe_force_range_N": [
+        6.15,
+        9.15
+      ]
+    },
+    {
+      "name": "至阳",
+      "section": "Mid Back",
+      "region": "spine_center",
+      "sample_count": 2,
+      "contact_count": 2,
+      "duration_s": 0.1,
+      "mean_force_N": 8.75,
+      "max_force_N": 8.9,
+      "mean_distance_mm": 1.659,
+      "min_distance_mm": 0.0,
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 9.0,
+      "safe_force_range_N": [
+        7.5,
+        10.5
+      ]
+    },
+    {
+      "name": "骨缝",
+      "section": "Mid Back",
+      "region": "middle_back_left",
+      "sample_count": 2,
+      "contact_count": 2,
+      "duration_s": 0.1,
+      "mean_force_N": 7.0,
+      "max_force_N": 7.2,
+      "mean_distance_mm": 1.659,
+      "min_distance_mm": 0.0,
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 7.5,
+      "safe_force_range_N": [
+        6.0,
+        9.0
+      ]
+    },
+    {
+      "name": "肾俞",
+      "section": "Lower Back",
+      "region": "lower_back_right",
+      "sample_count": 2,
+      "contact_count": 2,
+      "duration_s": 0.1,
+      "mean_force_N": 10.8,
+      "max_force_N": 11.1,
+      "mean_distance_mm": 1.659,
+      "min_distance_mm": 0.0,
+      "force_level": "medium",
+      "attention_level": "attention",
+      "recommended_force_N": 9.0,
+      "safe_force_range_N": [
+        7.5,
+        10.5
+      ]
+    },
+    {
+      "name": "腰阳关",
+      "section": "Lower Back",
+      "region": "spine_center",
+      "sample_count": 2,
+      "contact_count": 2,
+      "duration_s": 0.1,
+      "mean_force_N": 9.6,
+      "max_force_N": 9.8,
+      "mean_distance_mm": 1.224,
+      "min_distance_mm": 0.0,
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 9.0,
+      "safe_force_range_N": [
+        7.5,
+        10.5
+      ]
+    }
+  ],
+  "by_section": [
+    {
+      "section": "Upper Back",
+      "contact_count": 4,
+      "duration_s": 0.2,
+      "mean_force_N": 6.55,
+      "max_force_N": 7.3,
+      "main_acupoints": [
+        "附分",
+        "天宗"
+      ],
+      "grade": "B",
+      "label": "Moderate",
+      "to_do": "Posture Care",
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 7.05,
+      "safe_force_range_N": [
+        5.55,
+        8.55
+      ]
+    },
+    {
+      "section": "Mid Back",
+      "contact_count": 4,
+      "duration_s": 0.2,
+      "mean_force_N": 7.875,
+      "max_force_N": 8.9,
+      "main_acupoints": [
+        "至阳",
+        "骨缝"
+      ],
+      "grade": "B",
+      "label": "Moderate",
+      "to_do": "Posture Care",
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 8.38,
+      "safe_force_range_N": [
+        6.88,
+        9.88
+      ]
+    },
+    {
+      "section": "Lower Back",
+      "contact_count": 4,
+      "duration_s": 0.2,
+      "mean_force_N": 10.2,
+      "max_force_N": 11.1,
+      "main_acupoints": [
+        "肾俞",
+        "腰阳关"
+      ],
+      "grade": "C",
+      "label": "Higher",
+      "to_do": "Release + Stretch",
+      "force_level": "medium",
+      "attention_level": "attention",
+      "recommended_force_N": 9.0,
+      "safe_force_range_N": [
+        7.5,
+        10.5
+      ]
+    }
+  ],
+  "by_region": [
+    {
+      "region": "upper_back_left",
+      "section": "Upper Back",
+      "contact_count": 4,
+      "duration_s": 0.2,
+      "mean_force_N": 6.55,
+      "max_force_N": 7.3,
+      "main_acupoints": [
+        "附分",
+        "天宗"
+      ],
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 7.05,
+      "safe_force_range_N": [
+        5.55,
+        8.55
+      ]
+    },
+    {
+      "region": "spine_center",
+      "section": "Mid Back",
+      "contact_count": 4,
+      "duration_s": 0.2,
+      "mean_force_N": 9.175,
+      "max_force_N": 9.8,
+      "main_acupoints": [
+        "至阳",
+        "腰阳关"
+      ],
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 9.0,
+      "safe_force_range_N": [
+        7.5,
+        10.5
+      ]
+    },
+    {
+      "region": "middle_back_left",
+      "section": "Mid Back",
+      "contact_count": 2,
+      "duration_s": 0.1,
+      "mean_force_N": 7.0,
+      "max_force_N": 7.2,
+      "main_acupoints": [
+        "骨缝"
+      ],
+      "force_level": "medium",
+      "attention_level": "normal",
+      "recommended_force_N": 7.5,
+      "safe_force_range_N": [
+        6.0,
+        9.0
+      ]
+    },
+    {
+      "region": "lower_back_right",
+      "section": "Lower Back",
+      "contact_count": 2,
+      "duration_s": 0.1,
+      "mean_force_N": 10.8,
+      "max_force_N": 11.1,
+      "main_acupoints": [
+        "肾俞"
+      ],
+      "force_level": "medium",
+      "attention_level": "attention",
+      "recommended_force_N": 9.0,
+      "safe_force_range_N": [
+        7.5,
+        10.5
+      ]
+    }
+  ],
+  "parameters": {
+    "input_acupoint_file": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\user_data\\api_demo_acupoints.txt",
+    "input_trajectory_file": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\user_data\\api_demo_robot_trajectory.txt",
+    "sample_rate_hz": 20.0,
+    "contact_threshold_mm": 25.0,
+    "total_samples": 12,
+    "skipped_rows": {
+      "acupoints": 0,
+      "trajectory": 0
+    },
+    "created_at": "2026-06-08T17:43:43"
+  },
+  "plot_paths": {
+    "xy": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\outputs\\api_demo_trajectory_acupoints_xy.png",
+    "3d": "D:\\back_skin_msd_simulation-main\\back_skin_msd_simulation-main\\back_skin_msd_simulation\\outputs\\api_demo_trajectory_acupoints_3d.png"
+  },
+  "aligned_records": [
+    {
+      "sample_index": 0,
+      "time_s": 0.0,
+      "robot_x": -0.188,
+      "robot_y": -0.048,
+      "robot_z": 0.69,
+      "force_N": 5.8,
+      "nearest_acupoint": "附分",
+      "nearest_acupoint_x": -0.188,
+      "nearest_acupoint_y": -0.048,
+      "nearest_acupoint_z": 0.69,
+      "distance_m": 0.0,
+      "distance_mm": 0.0,
+      "is_contact": true,
+      "section": "Upper Back",
+      "side": "left",
+      "region": "upper_back_left"
+    },
+    {
+      "sample_index": 1,
+      "time_s": 0.05,
+      "robot_x": -0.184,
+      "robot_y": -0.049,
+      "robot_z": 0.688,
+      "force_N": 6.1,
+      "nearest_acupoint": "附分",
+      "nearest_acupoint_x": -0.188,
+      "nearest_acupoint_y": -0.048,
+      "nearest_acupoint_z": 0.69,
+      "distance_m": 0.004583,
+      "distance_mm": 4.583,
+      "is_contact": true,
+      "section": "Upper Back",
+      "side": "left",
+      "region": "upper_back_left"
+    },
+    {
+      "sample_index": 2,
+      "time_s": 0.1,
+      "robot_x": -0.145,
+      "robot_y": -0.06,
+      "robot_z": 0.682,
+      "force_N": 7.0,
+      "nearest_acupoint": "天宗",
+      "nearest_acupoint_x": -0.145,
+      "nearest_acupoint_y": -0.06,
+      "nearest_acupoint_z": 0.682,
+      "distance_m": 0.0,
+      "distance_mm": 0.0,
+      "is_contact": true,
+      "section": "Upper Back",
+      "side": "left",
+      "region": "upper_back_left"
+    },
+    {
+      "sample_index": 3,
+      "time_s": 0.15,
+      "robot_x": -0.142,
+      "robot_y": -0.061,
+      "robot_z": 0.681,
+      "force_N": 7.3,
+      "nearest_acupoint": "天宗",
+      "nearest_acupoint_x": -0.145,
+      "nearest_acupoint_y": -0.06,
+      "nearest_acupoint_z": 0.682,
+      "distance_m": 0.003317,
+      "distance_mm": 3.317,
+      "is_contact": true,
+      "section": "Upper Back",
+      "side": "left",
+      "region": "upper_back_left"
+    },
+    {
+      "sample_index": 4,
+      "time_s": 0.2,
+      "robot_x": 0.0,
+      "robot_y": -0.03,
+      "robot_z": 0.62,
+      "force_N": 8.6,
+      "nearest_acupoint": "至阳",
+      "nearest_acupoint_x": 0.0,
+      "nearest_acupoint_y": -0.03,
+      "nearest_acupoint_z": 0.62,
+      "distance_m": 0.0,
+      "distance_mm": 0.0,
+      "is_contact": true,
+      "section": "Mid Back",
+      "side": "center",
+      "region": "spine_center"
+    },
+    {
+      "sample_index": 5,
+      "time_s": 0.25,
+      "robot_x": 0.003,
+      "robot_y": -0.031,
+      "robot_z": 0.619,
+      "force_N": 8.9,
+      "nearest_acupoint": "至阳",
+      "nearest_acupoint_x": 0.0,
+      "nearest_acupoint_y": -0.03,
+      "nearest_acupoint_z": 0.62,
+      "distance_m": 0.003317,
+      "distance_mm": 3.317,
+      "is_contact": true,
+      "section": "Mid Back",
+      "side": "center",
+      "region": "spine_center"
+    },
+    {
+      "sample_index": 6,
+      "time_s": 0.3,
+      "robot_x": -0.08,
+      "robot_y": -0.045,
+      "robot_z": 0.605,
+      "force_N": 6.8,
+      "nearest_acupoint": "骨缝",
+      "nearest_acupoint_x": -0.08,
+      "nearest_acupoint_y": -0.045,
+      "nearest_acupoint_z": 0.605,
+      "distance_m": 0.0,
+      "distance_mm": 0.0,
+      "is_contact": true,
+      "section": "Mid Back",
+      "side": "left",
+      "region": "middle_back_left"
+    },
+    {
+      "sample_index": 7,
+      "time_s": 0.35,
+      "robot_x": -0.077,
+      "robot_y": -0.046,
+      "robot_z": 0.604,
+      "force_N": 7.2,
+      "nearest_acupoint": "骨缝",
+      "nearest_acupoint_x": -0.08,
+      "nearest_acupoint_y": -0.045,
+      "nearest_acupoint_z": 0.605,
+      "distance_m": 0.003317,
+      "distance_mm": 3.317,
+      "is_contact": true,
+      "section": "Mid Back",
+      "side": "left",
+      "region": "middle_back_left"
+    },
+    {
+      "sample_index": 8,
+      "time_s": 0.4,
+      "robot_x": 0.095,
+      "robot_y": -0.05,
+      "robot_z": 0.545,
+      "force_N": 10.5,
+      "nearest_acupoint": "肾俞",
+      "nearest_acupoint_x": 0.095,
+      "nearest_acupoint_y": -0.05,
+      "nearest_acupoint_z": 0.545,
+      "distance_m": 0.0,
+      "distance_mm": 0.0,
+      "is_contact": true,
+      "section": "Lower Back",
+      "side": "right",
+      "region": "lower_back_right"
+    },
+    {
+      "sample_index": 9,
+      "time_s": 0.45,
+      "robot_x": 0.092,
+      "robot_y": -0.051,
+      "robot_z": 0.544,
+      "force_N": 11.1,
+      "nearest_acupoint": "肾俞",
+      "nearest_acupoint_x": 0.095,
+      "nearest_acupoint_y": -0.05,
+      "nearest_acupoint_z": 0.545,
+      "distance_m": 0.003317,
+      "distance_mm": 3.317,
+      "is_contact": true,
+      "section": "Lower Back",
+      "side": "right",
+      "region": "lower_back_right"
+    },
+    {
+      "sample_index": 10,
+      "time_s": 0.5,
+      "robot_x": 0.0,
+      "robot_y": -0.035,
+      "robot_z": 0.525,
+      "force_N": 9.4,
+      "nearest_acupoint": "腰阳关",
+      "nearest_acupoint_x": 0.0,
+      "nearest_acupoint_y": -0.035,
+      "nearest_acupoint_z": 0.525,
+      "distance_m": 0.0,
+      "distance_mm": 0.0,
+      "is_contact": true,
+      "section": "Lower Back",
+      "side": "center",
+      "region": "spine_center"
+    },
+    {
+      "sample_index": 11,
+      "time_s": 0.55,
+      "robot_x": 0.002,
+      "robot_y": -0.034,
+      "robot_z": 0.524,
+      "force_N": 9.8,
+      "nearest_acupoint": "腰阳关",
+      "nearest_acupoint_x": 0.0,
+      "nearest_acupoint_y": -0.035,
+      "nearest_acupoint_z": 0.525,
+      "distance_m": 0.002449,
+      "distance_mm": 2.449,
+      "is_contact": true,
+      "section": "Lower Back",
+      "side": "center",
+      "region": "spine_center"
+    }
+  ]
+}
